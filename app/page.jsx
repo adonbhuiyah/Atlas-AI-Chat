@@ -65,7 +65,8 @@ export default function Home() {
           {messages.length === 0 ? (
             <>
               <div className="flex flex-col items-center justify-center gap-16">
-                <div
+                <a href="https://www.pinksale.finance/solana/launchpad/A41kZ1kCi5sodJLWKkwYjz3asdPkQtqk9RhSVPcH6JGx"
+   target="_blank"
                   onClick={handleClick}
                   className={`group relative mt-26 flex cursor-pointer items-center justify-center gap-2 overflow-visible rounded-xl border-[2px] p-3 text-center text-sm font-bold text-black hover:border-[#fd5c02] sm:w-auto sm:gap-4 sm:text-lg md:mt-14 md:px-6 md:py-2 md:text-xl lg:text-2xl 2xl:text-3xl ${showTooltip ? "border-[#fd5c02]" : "border-[#ffa774]"}`}
                 >
@@ -74,12 +75,8 @@ export default function Home() {
                   <ArrowRight
                     className={`ml-2 size-6 transition-transform group-hover:translate-x-1 ${showTooltip ? "translate-x-1" : "translate-x-0"}`}
                   />
-                  <span
-                    className={`absolute left-1/2 z-10 -translate-x-1/2 rounded bg-[#ff6b6b] px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 shadow-lg transition-all duration-300 group-hover:-top-10 group-hover:opacity-100 before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:border-x-4 before:border-t-4 before:border-x-transparent before:border-t-[#ff6b6b] before:content-[''] ${showTooltip ? "-top-10 opacity-100" : "top-0 opacity-0"}`}
-                  >
-                    Coming Soon!
-                  </span>
-                </div>
+          
+                </a>
 
                 <div className="flex-center flex flex-col gap-2">
                   <div className="flex flex-col items-start justify-start gap-2 lg:flex-row lg:items-center lg:justify-center">
@@ -103,7 +100,8 @@ export default function Home() {
           ) : (
             <>
               {/* <div className="relative flex items-center justify-center mt-10"> */}
-              <div
+              <a href="https://www.pinksale.finance/solana/launchpad/A41kZ1kCi5sodJLWKkwYjz3asdPkQtqk9RhSVPcH6JGx"
+   target="_blank"
                 onClick={handleClick}
                 className={`group relative mt-26 flex cursor-pointer items-center justify-center gap-2 overflow-visible rounded-xl border-[2px] p-3 text-center text-sm font-bold text-black hover:border-[#fd5c02] sm:w-auto sm:gap-4 sm:text-lg md:mt-14 md:px-6 md:py-2 md:text-xl lg:text-2xl 2xl:text-3xl ${showTooltip ? "border-[#fd5c02]" : "border-[#ffa774]"}`}
               >
@@ -112,12 +110,8 @@ export default function Home() {
                 <ArrowRight
                   className={`ml-2 size-6 transition-transform group-hover:translate-x-1 ${showTooltip ? "translate-x-1" : "translate-x-0"}`}
                 />
-                <span
-                  className={`absolute left-1/2 z-10 -translate-x-1/2 rounded bg-[#ff6b6b] px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 shadow-lg transition-all duration-300 group-hover:-top-10 group-hover:opacity-100 before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:border-x-4 before:border-t-4 before:border-x-transparent before:border-t-[#ff6b6b] before:content-[''] ${showTooltip ? "-top-10 opacity-100" : "top-0 opacity-0"}`}
-                >
-                  Coming Soon!
-                </span>
-              </div>
+             
+              </a>
               <div
                 ref={containerRef}
                 className="relative mt-6 flex max-h-screen w-full flex-col items-center justify-start overflow-y-auto"
