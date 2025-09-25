@@ -1,6 +1,9 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 
-export default clerkMiddleware();
+export default clerkMiddleware({
+  // 👇 Make /projects/* public so Clerk won't redirect
+  publicRoutes: ["/projects(.*)"],
+});
 
 export const config = {
   matcher: [
