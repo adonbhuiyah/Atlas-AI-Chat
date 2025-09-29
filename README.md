@@ -1,187 +1,66 @@
-# DeepSeek Clone
+# Atlas AI Chatbot Web App
 
-DeepSeek Clone is a web application designed to provide an interactive chat interface powered by **AI**. It allows users to engage in conversations, manage chats, and perform actions like renaming or deleting chats. The application is built using modern web technologies such as React, Next.js, and Node.js.
+🌐 Visit Live Website: [https://atlas-chat.adonr.dev](https://atlas-chat.adonr.dev)
 
-## LIVE - DEMO 🌐
+---
 
-Visit the 👉 [LINK 🔗](https://deepseek-clone-gold.vercel.app)
+## Project Overview
 
-## Features
+Atlas is a full-stack AI chatbot web application built with modern technologies. Users can ask questions, view their chat history, and interact seamlessly with “Atlas” — an intelligent AI assistant.  
 
-- **AI-Powered Chat**: Users can send prompts and receive responses from an AI model.
-- **Chat Management**: Users can rename or delete chats.
-- **Real-Time Updates**: Chat messages are updated dynamically in the UI.
-- **User Authentication**: Secure user authentication and session management.
-- **Responsive Design**: Optimized for both desktop and mobile devices.
+The app features a sleek, responsive UI with a dynamic chat interface, a crypto launch **Call-to-Action (CTA)**, and session-based Q&A support. Designed with scalability, performance, and user experience in mind.
 
-## Tech Stack
+---
 
-- **Frontend**: React, Next.js
-- **Backend**: Node.js, Clerk
-- **Database**: MongoDB
-- **Styling**: Tailwind CSS
-- **State Management**: Context API
-- **Notifications**: React Hot Toast
-- **API Integration**: Axios
+## Key Features
 
-## Folder Structure
+- ✅ **Interactive Chat Interface** – Real-time conversation with “Atlas” in a clean, responsive design.  
+- ✅ **Chat History** – Session-based Q&A allows users to revisit previous conversations.  
+- ✅ **Crypto Launch CTA** – Integrated promotional feature for crypto project announcements.  
+- ✅ **Responsive UI/UX** – Built with TailwindCSS for a modern, mobile-friendly design.  
+- ✅ **Scalable Architecture** – Backend powered by Node.js, Express, and MongoDB.  
+- ✅ **Version Control** – Managed with Git and GitHub for collaboration and deployment.  
 
-```groovy
-deepseek-clone/
-├── app/
-│   ├── api/
-│   │   ├── chat/
-│   │   │   ├── ai/         # AI chat endpoint
-│   │   │   ├── rename/     # Rename chat endpoint
-│   │   │   └── delete/     # Delete chat endpoint
-│   └── clerk/              # Clerk webhook integration
-├── components/
-│   ├── ChatLabel.jsx       # Chat label component
-│   ├── PromptBox.jsx       # Chat input box component
-│   └── Sidebar.jsx         # Sidebar for chat navigation
-├── context/
-│   └── AppContext.jsx      # Global state management
-├── config/
-│   └── db.js               # MongoDB connection configuration
-├── models/
-│   └── User.js             # User model schema
-├── public/
-│   └── assets/             # Static assets (icons, images)
-├── styles/
-│   └── globals.css         # Global styles
-└── README.md               # Project documentation
-```
+---
 
-## Installation
+## Technologies Used
 
-1. Clone the repository:
+- **Frontend:** Next.js, React, TailwindCSS  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **Version Control & Deployment:** Git & GitHub  
 
-   ```bash
-   git clone https://github.com/elyse502/deepseek-clone.git
-   cd deepseek-clone
-   ```
+---
 
-2. Install dependencies:
+## Technical Implementation
 
-   ```bash
-   npm install
-   ```
+- **Next.js + React** – Provides server-side rendering, routing, and dynamic components.  
+- **Express.js + Node.js** – Handles API requests and chatbot session management.  
+- **MongoDB** – Stores chat history and user sessions for persistence.  
+- **TailwindCSS** – Utility-first framework for responsive and modern UI.  
+- **Git & GitHub** – Source code management, version control, and team collaboration.  
 
-3. Set up environment variables:
-   Create a `.env` file in the root directory and add the following:
+---
 
-   ```env
-   # 👇 Frontend (Public) Clerk Key – starts with pk_...
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+## Usage
 
-   # 👇 Backend (Secret) Clerk Key – starts with sk_...
-   CLERK_SECRET_KEY=your-clerk-secret-key
+1. Visit the live app: [https://atlas-chat.adonr.dev](https://atlas-chat.adonr.dev)
+2. Start a chat with **Atlas** by typing your question.  
+3. View session-based chat history for previous interactions.  
+4. Explore the integrated **crypto launch CTA**.  
 
-   # 👇 Your MongoDB connection string
-   MONGODB_URI=your-mongodb-connection-string
+---
 
-   # 👇 Secret key used for signing webhooks (like SVIX)
-   SIGNING_SECRET=your-svix-signing-secret
+## 🤝 Let's Connect!
 
-   # 👇 API key for DeepSeek or any AI/chat API service
-   DEEPSEEK_API_KEY=your-deepseek-api-key
+**Website:** [adonr.dev](https://adonr.dev)  
+**Email:** [contact@adonr.dev](mailto:contact@adonr.dev)  
+**GitHub:** [View My GitHub Profile](https://github.com/AdonBhuiyah)
 
-   ```
-
-4. Run the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open the application in your browser:
-   ```
-   http://localhost:3000
-   ```
-
-## API Endpoints
-
-### `/api/chat/ai`
-
-- **Method**: POST
-- **Description**: Sends a user prompt to the AI model and retrieves a response.
-- **Request Body**:
-  ```json
-  {
-    "chatId": "string",
-    "prompt": "string"
-  }
-  ```
-- **Response**:
-  ```json
-  {
-    "success": true,
-    "data": {
-      "content": "AI response"
-    }
-  }
-  ```
-
-### `/api/chat/rename`
-
-- **Method**: POST
-- **Description**: Renames a chat.
-- **Request Body**:
-  ```json
-  {
-    "chatId": "string",
-    "name": "string"
-  }
-  ```
-- **Response**:
-  ```json
-  {
-    "success": true,
-    "message": "Chat renamed successfully"
-  }
-  ```
-
-### `/api/chat/delete`
-
-- **Method**: POST
-- **Description**: Deletes a chat.
-- **Request Body**:
-  ```json
-  {
-    "chatId": "string"
-  }
-  ```
-- **Response**:
-  ```json
-  {
-    "success": true,
-    "message": "Chat deleted successfully"
-  }
-  ```
-
-## Components
-
-### `ChatLabel.jsx`
-
-- Displays individual chat labels in the sidebar.
-- Allows renaming and deleting chats via a dropdown menu.
-
-### `PromptBox.jsx`
-
-- Provides a text area for users to input prompts.
-- Handles sending prompts to the AI and displaying responses.
-
-### `Sidebar.jsx`
-
-- Displays a list of chats.
-- Allows users to select a chat to view or interact with.
-
-## Context API
-
-The `AppContext` provides global state management for the application, including:
-
-- `user`: Current logged-in user.
-- `chats`: List of user chats.
-- `selectedChat`: Currently selected chat.
-- `setChats`: Function to update the list of chats.
-- `setSelectedChat`: Function to update the selected chat.
+[![X (formerly Twitter)](https://img.shields.io/badge/-X-black?style=flat-square&logo=x&logoColor=white)](https://x.com/AdonBhuiyah)
+[![Telegram](https://img.shields.io/badge/-Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/AdonBhuiyah)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/AdonBhuiyah)
+[![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/AdonBhuiyah)
+[![Facebook](https://img.shields.io/badge/-Facebook-E4405F?style=flat-square&logo=facebook&logoColor=white)](https://facebook.com/AdonBhuiyah1)
+[![Pinterest](https://img.shields.io/badge/-Pinterest-BD081C?style=flat-square&logo=pinterest&logoColor=white)](https://pinterest.com/AdonBhuiyah)    
+[![Threads](https://img.shields.io/badge/-Threads-000000?style=flat-square&logo=threads&logoColor=white)](https://threads.net/AdonBhuiyah)
